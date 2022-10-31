@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS k2_inventory;
 USE k2_inventory;
 
 CREATE USER IF NOT EXISTS 'k2_control'@'localhost' IDENTIFIED BY 'K2GXT@2019';
-GRANT SELECT, UPDATE, CREATE, INSERT ON database.table TO 'k2_control'@'localhost';
+GRANT SELECT, UPDATE, CREATE, INSERT ON k2_inventory.* TO 'k2_control'@'localhost';
 FLUSH PRIVILEGES;
 
 CREATE TABLE IF NOT EXISTS UserTypes (
